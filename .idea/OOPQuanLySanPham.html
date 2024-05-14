@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let list = [
+        {
+            ten: 'An',
+            diem: 30,
+            lop: 'C03',
+        },
+        {
+            ten: 'Binh',
+            diem: 40,
+            lop: 'C04',
+        },
+        {
+            ten: 'Chien',
+            diem: 70,
+            lop: 'C03',
+        }
+    ];
+    for (let i = 0; i < list.length; i++) {
+        document.write(`1.${list[i].ten}: ${list[i].diem}: ${list[i].lop}<br>`)
+    }
+    let max = list[0];
+    for (let i = 0; i < list.length; i++) {
+        if (list[i].diem > max.diem) {
+            max = list[i];
+        }
+    }
+    document.write(`2.${max.ten}: ${max.diem}: ${max.lop}<br>`)
+
+    //////
+    for (let i = 0; i < list.length; i++) {
+        if (list[i].lop === "C03") {
+            document.write(`3.${list[i].ten}: ${list[i].diem}: ${list[i].lop}<br>`)
+
+        }
+    }
+</script>
+</body>
+</html>
